@@ -1,16 +1,20 @@
 {
-  "name": "r6tab",
+  "name": "sreyasnodejs",
   "version": "1.0.0",
-  "description": "Testing the R6tab API",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Sreyas",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
     "ejs": "^2.7.1",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "install": "^0.13.0",
+    "npm": "^6.11.3",
+    "request": "^2.88.0"
   }
 }
