@@ -21,7 +21,7 @@ app.get('/', function (req, res) {
         res.render('index', {weather: null, error: 'Error, please try again'});
       } else {
         let weather = JSON.parse(body)
-        if(weather.main == undefined){
+        if(weather.results == undefined){
           res.render('index', {weather: null, error: 'Error, please try again'});
         } else {
           let weatherText = `It's ${weather.results.p_name}`;
