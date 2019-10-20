@@ -24,9 +24,9 @@ app.get('/', function (req, res) {
         if(weather.main == undefined){
           res.render('index', {weather: null, error: 'Error, please try again'});
         } else {
-          //let weatherText = `It's ${(5/9) * (weather.main.temp - 32)} degrees in ${weather.name}!`;
-          //res.render('index', {weather: weatherText, error: null});
-          res.json(weather);
+          let weatherText = `It's ${weather.results.p_name}`;
+          res.render('index', {weather: weatherText, error: null});
+          //res.json(weather);
         }
       }
     });
