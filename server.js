@@ -12,7 +12,7 @@ app.get('/', function (req, res) {
   })
   
   app.post('/', function (req, res) {
-    let city = req.body.;
+    let city = req.body.siege_name;
     let url = `https://r6tab.com/api/search.php?platform=uplay&search=${city}`
 
     request(url, function (err, response, body) {
