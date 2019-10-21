@@ -17,14 +17,14 @@ app.get('/', function (req, res) {
 
     request(url, function (err, response, body) {
       if(err){
-        res.render('index', {player: null, error: 'There is some error! Please try again :)'});
+        res.render('player_details', {player: null, error: 'There is some error! Please try again :)'});
       } else {
         let player = JSON.parse(body)
         if(player.results == undefined){
-          res.render('index', {player: null, error: 'Error, Player does not exist'});
+          res.render('player_details', {player: null, error: 'Error, Player does not exist'});
         } else {
           let playerText = `It's ${player.results[0].p_name}`;
-          res.render('index', {player: playerText, error: null});
+          res.render('player_details', {player: playerText, error: null});
           //res.json(player);
         }
       }
