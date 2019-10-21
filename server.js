@@ -12,8 +12,8 @@ app.get('/', function (req, res) {
   })
   
   app.post('/', function (req, res) {
-    let city = req.body.siege_player;
-    let url = `https://r6tab.com/api/search.php?platform=uplay&search=${siege_player}`
+    let siege_name = req.body.siege_player;
+    let url = `https://r6tab.com/api/search.php?platform=uplay&search=${siege_name}`
 
     request(url, function (err, response, body) {
       if(err){
